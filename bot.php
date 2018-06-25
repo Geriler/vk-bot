@@ -44,30 +44,30 @@ while (true) {
                             $res = captcha($res, $matches[1], $id);
                             var_dump($res);
                         }
-						if (preg_match('/^\/weather$/s', $update[6], $matches)) {
-							$res = weather($id);
-							var_dump($res);
-						}
-						if (preg_match('/^\/roll\s*(.*)$/s', $update[6], $matches)) {
-							$res = roll($matches[1], $id);
-							var_dump($res);
-						}
-						if (preg_match('/^\/list\s*(.*)$/s', $update[6], $matches)) {
-							$res = cmdlist($matches[1], $id);
-							var_dump($res);
-						}
-						if (preg_match('/^(Бот|Вика|Виктория).+\?$/s', $update[6], $matches)) {
-							$res = questionandanswer($id, $update[1]);
-							var_dump($res);
-						}
-						if (preg_match('/^\/info$/s', $update[6], $matches)) {
-							$res = info($id);
-							var_dump($res);
-						}
-						if (preg_match('/^\/pic$/s', $update[6], $matches)) {
-							$res = picture($id);
-							var_dump($res);
-						}
+			if (preg_match('/^\/weather$/s', $update[6], $matches)) {
+				$res = weather($id);
+				var_dump($res);
+			}
+			if (preg_match('/^\/roll\s*(.*)$/s', $update[6], $matches)) {
+				$res = roll($matches[1], $id);
+				var_dump($res);
+			}
+			if (preg_match('/^\/list\s*(.*)$/s', $update[6], $matches)) {
+				$res = cmdlist($matches[1], $id);
+				var_dump($res);
+			}
+			if (preg_match('/^(Бот|Вика|Виктория).+\?$/s', $update[6], $matches)) {
+				$res = questionandanswer($id, $update[1]);
+				var_dump($res);
+			}
+			if (preg_match('/^\/info$/s', $update[6], $matches)) {
+				$res = info($id);
+				var_dump($res);
+			}
+			if (preg_match('/^\/pic$/s', $update[6], $matches)) {
+				$res = picture($id);
+				var_dump($res);
+			}
                     }
                 }
             }
